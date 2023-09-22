@@ -1,4 +1,4 @@
-const data_reading = [
+export const data_trend = [
     {
         "id": "1",
         "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSXhUzi9IEN2f_raWyflToI7HGYMf3yN0Ug1lN1kSBhQJXtyTNN"
