@@ -1,0 +1,32 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    background-color: #0C0540;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+h2{
+    color: white;
+    font-family: 'Asul', sans-serif;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+hr{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5%;
+}
+
+
+@media (max-width: 400px) {
+    h2{
+        font-size: 15px;
+    }
+
+}
