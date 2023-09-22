@@ -35,7 +35,10 @@ h1{
     align-content:center ;
     justify-content: center;
     position: relative;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
+
 img{
     width: 20%;
     height: 60vh;
@@ -54,4 +57,27 @@ img{
     margin-top: 5%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
+}
+
+@media (max-width: 400px) {
+   
+img{
+    height: 26vh;
+    width: 25%;
+    border-radius:10px;
+    margin-left: 5%;
+    margin-right: 20%;}
+
+    p{
+      font-size: 11px;
+    }
+
+    h1{
+      font-size: 17px;
+    }
+    h2{font-size: 15px;}
+
+    .text{ margin-left: 25%;
+        margin-top: 10%;}
+
 }

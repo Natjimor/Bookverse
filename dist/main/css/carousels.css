@@ -27,14 +27,16 @@ img{
 
 @media (max-width: 400px) {
     img{
-        margin-left: 0%;
-        width: 55%;
+        margin-left: 20%;
+        height: 30vh;
         margin-top: 0;
     }
 
     .flickity-button{
         display: none;
     }
+
+
 
 }
 
@@ -61,6 +63,8 @@ img{
     box-shadow: 0 0 0 2px rgb(51, 0, 146);
   }
 
+
+  
 
 
 
