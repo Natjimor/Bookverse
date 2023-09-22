@@ -89,3 +89,9 @@
     outline: none;
     box-shadow: 0 0 0 2px rgb(51, 0, 146);
   }
+
+  
+@media (max-width: 400px) {
+  .flickity-button {
+    display: none;
+  }}
