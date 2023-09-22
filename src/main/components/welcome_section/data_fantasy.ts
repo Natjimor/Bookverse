@@ -1,4 +1,4 @@
-const data_fantasy = [
+ export const data_fantasy = [
     {
         "id": "1",
         "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSdC2OWCw6yGAXCrsGZOZ-2pirzc-rACoB1B5veyl7m0Es-6tgw"

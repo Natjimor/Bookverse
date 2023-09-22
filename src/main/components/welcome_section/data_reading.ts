@@ -1,4 +1,4 @@
-const data_reading = [
+export const data_reading = [
     {
         "id": "1",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKrycZhqbbHLye6WsJXS8eQZqdohEwcoC_5BLfBYU22KuCjN6Z"

@@ -1,4 +1,4 @@
-const data_mistery = [
+export const data_mistery = [
     {
         "id": "1",
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9sbxVgy949Y5qirIfs2vnwEXi7QsoYarRyU9r2s6UoQeLAmhD"
