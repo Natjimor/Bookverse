@@ -1,34 +1,8 @@
 
 import Flickity from 'flickity';
 import { data_fantasy } from './data_fantasy';
-export enum books_image {
-  "img" = "img",
-}
 
 class third_carrusel extends HTMLElement {
-
-  props: Record<books_image, string> = {
-    img: "",
-  };
-
-  nameIndex: null | number = null;
-
-  static get observedAttributes() {
-    const options: books_image[] = [
-      books_image.img,
-    ];
-    return options;
-  }
-
-  attributeChangedCallback(
-    propName: books_image, _: string, value: string) {
-    switch (propName) {
-      default:
-          this.props[propName] = value;
-          break;
-  }
-  }
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
