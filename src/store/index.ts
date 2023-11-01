@@ -4,8 +4,8 @@ import { Actions, AppState, Observer } from "../types/store";
 import { reducer } from "./reducer";
 import { Screens } from "../types/navigation";
 
-const emptyState = {
-  screen: Screens.LOGIN,
+export const emptyState = {
+  screen: Screens. sing_in,
 };
 
 export let appState = Storage.get<AppState>({
