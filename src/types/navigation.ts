@@ -1,6 +1,8 @@
 export enum Screens {
-    MAIN = "MAIN",
-    SING_IN = "SING_IN",
-    SING_UP = "SING_UP",
-    DASHBOARD = "DASHBOARD",
+    main = "main",
+    sing_in = "sing_in",
+    sing_up = "sing_up",
+    landing = "landing",
+    porfile = "porfile",
+    settings = "setings",
 }
