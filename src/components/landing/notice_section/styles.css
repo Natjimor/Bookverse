@@ -1,0 +1,49 @@
+* { 
+    padding:0%;
+    margin: 0%;
+}
+  
+body { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    width: 100vw;
+    height: 95vh;
+}
+  
+.carousel{
+    width: 100vw;
+    height: 95vh;
+}
+
+.flickity-button {
+    display: none;
+}
+
+section .flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section .flickity-page-dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0 8px;
+    background: hsla(0, 0%, 100%, 0.25);
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    overflow: hidden;
+}
+section .flickity-page-dot.is-selected {
+    background: hsl(0, 0%, 84%);
+}
