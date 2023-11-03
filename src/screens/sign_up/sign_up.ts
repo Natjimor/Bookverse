@@ -15,7 +15,6 @@ export class app_singup extends HTMLElement {
 
   render() {
     if (this.shadowRoot) {
-
       this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="/dist/sign_up/css/component.css">
       <section>
