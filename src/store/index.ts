@@ -5,7 +5,7 @@ import { reducer } from "./reducer";
 import { Screens } from "../types/navigation";
 
 export const emptyState = {
-  screen: Screens. sing_in,
+  screen: Screens.landing,
 };
 
 export let appState = Storage.get<AppState>({

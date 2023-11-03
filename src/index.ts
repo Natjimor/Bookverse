@@ -1,10 +1,11 @@
-import { sing_in, app_singup, porfile } from "./export";
-console.log(sing_in, app_singup, porfile);
-import firebaseConfig from "./firebase";
-console.log(firebaseConfig);
+import { sing_in, app_singup, porfile,  } from "./components/export";
+import firebaseConfig from "./services/firebase";
 import { emptyState, addObserver, appState } from "./store/index";
 import { Screens } from "./types/navigation";
 import { navigate } from "./store/acctions";
+
+console.log(firebaseConfig);
+console.log(sing_in, app_singup, porfile);
 
 class app extends HTMLElement {
   constructor() {
@@ -34,11 +35,11 @@ class app extends HTMLElement {
           this.shadowRoot.appendChild(singIn);
           break;
         case Screens.landing:
-          const Landig = this.ownerDocument.createElement(`sing-container`);
+          const Landig = this.ownerDocument.createElement(`landing-bookverse`);
           this.shadowRoot.appendChild(Landig);
           break;
         case Screens.main:
-          const Main = this.ownerDocument.createElement(`sing-container`);
+          const Main = this.ownerDocument.createElement(`main-bookverse`);
           this.shadowRoot.appendChild(Main);
           break;
 
@@ -46,6 +47,7 @@ class app extends HTMLElement {
           const Reading = this.ownerDocument.createElement(`sing-container`);
           this.shadowRoot.appendChild(Reading);
           break;
+
         case Screens.settings:
           const Setings = this.ownerDocument.createElement(`sing-container`);
           this.shadowRoot.appendChild(Setings);
@@ -57,4 +59,4 @@ class app extends HTMLElement {
   }
 }
 
-customElements.define("app-container", app);
+customElements.define("bookverse-container", app)

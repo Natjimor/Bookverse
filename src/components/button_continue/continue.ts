@@ -1,6 +1,11 @@
 import { addObserver, appState, dispatch } from "../../store";
 import { navigate } from "../../store/acctions";
 import { Screens } from "../../types/navigation";
+import { inputs, inputsName } from "../export"; 
+import { user } from "../../services/firebase";
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
+
 
 export class button extends HTMLElement {
   constructor() {
@@ -12,19 +17,18 @@ export class button extends HTMLElement {
     this.render();
   }
 
- async render() {
+  render() {
     if (this.shadowRoot) {
-      const css = this.ownerDocument.createElement("link");
-      css.setAttribute("rel", "stylesheet");
-      css.setAttribute("href", "/dist/sign_in/css/component.css");
-      this.shadowRoot.appendChild(css);
-
+      this.shadowRoot.innerHTML = ``
+      loadCss(this, styles);
       const btn = this.ownerDocument.createElement("button");
+      btn.classList.add("btnContinue")
       btn.textContent = `Continue`;
 
-      btn?.addEventListener(('click'), () =>{
-        dispatch(navigate(Screens.sing_in))
-      })
+      
+       btn.addEventListener(('click'), () =>{
+          dispatch(navigate(Screens.main))
+       })
       this.shadowRoot.appendChild(btn);
     }
   }

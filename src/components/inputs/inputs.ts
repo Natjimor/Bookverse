@@ -1,3 +1,6 @@
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
+
 export class inputs extends HTMLElement {
   constructor() {
     super();
@@ -10,16 +13,13 @@ export class inputs extends HTMLElement {
 
   render() {
     if (this.shadowRoot) {
-      const css = this.ownerDocument.createElement("link");
-      css.setAttribute("rel", "stylesheet");
-      css.setAttribute("href", "/dist/sign_in/css/component.css");
-      this.shadowRoot.appendChild(css);
 
       const p = this.ownerDocument.createElement("p");
       p.textContent = `Email`;
       p.classList.add("inputsP");
 
       const input_email = this.ownerDocument.createElement("input");
+      input_email.classList.add("emailInput")
       input_email.placeholder = `Email adress`;
 
       const pas = this.ownerDocument.createElement("p");
@@ -27,12 +27,14 @@ export class inputs extends HTMLElement {
       pas.classList.add("inputsP");
 
       const input_pass = this.ownerDocument.createElement("input");
+      input_pass.classList.add("passwordInput")
       input_pass.placeholder = `password`;
 
       this.shadowRoot.appendChild(p);
       this.shadowRoot.appendChild(input_email);
       this.shadowRoot.appendChild(pas);
       this.shadowRoot.appendChild(input_pass);
+      loadCss(this, styles);
     }
   }
 }

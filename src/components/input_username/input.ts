@@ -1,4 +1,6 @@
-import { inputs, button, Welcome} from "../../export";
+import { welcome, inputs, button } from "../export"; 
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
 
 export class inputsName extends HTMLElement {
   constructor() {
@@ -12,10 +14,6 @@ export class inputsName extends HTMLElement {
 
   render() {
     if (this.shadowRoot) {
-      const css = this.ownerDocument.createElement("link");
-      css.setAttribute("rel", "stylesheet");
-      css.setAttribute("href", "/dist/sign_up/css/component.css");
-      this.shadowRoot.appendChild(css);
 
       const name = this.ownerDocument.createElement("p");
       name.textContent = `User name`;
@@ -36,7 +34,8 @@ export class inputsName extends HTMLElement {
       div_inputs.appendChild(user_name);
       div_inputs.appendChild(inputs_email);
       div_inputs.appendChild(btn);
-
+      
+      loadCss(this, styles);
       this.shadowRoot.appendChild(div_inputs);
     }
   }

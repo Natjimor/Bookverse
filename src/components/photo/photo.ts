@@ -1,3 +1,5 @@
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
 export class photo extends HTMLElement {
   constructor() {
     super();
@@ -10,10 +12,6 @@ export class photo extends HTMLElement {
 
   render() {
     if (this.shadowRoot) {
-      const css = this.ownerDocument.createElement("link");
-      css.setAttribute("rel", "stylesheet");
-      css.setAttribute("href", "/dist/profile/css/component.css");
-      this.shadowRoot.appendChild(css);
 
       const back = this.ownerDocument.createElement("div");
       back.classList.add("back");
@@ -37,6 +35,7 @@ export class photo extends HTMLElement {
       div.appendChild(user);
       back.appendChild(div)
 
+      loadCss(this, styles);
       this.shadowRoot.appendChild(back);
     }
   }

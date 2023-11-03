@@ -1,5 +1,6 @@
-
-import { inputsName } from "../../export";
+import { inputsName } from "../../components/export";
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
 console.log(inputsName);
 
 
@@ -16,7 +17,6 @@ export class app_singup extends HTMLElement {
   render() {
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="/dist/sign_up/css/component.css">
       <section>
       <div id="back">
       <div id="white">
@@ -25,7 +25,8 @@ export class app_singup extends HTMLElement {
       </div>
       </div>
       </section>
-      `;
+      `
+      loadCss(this, styles);
     }
   }
 }

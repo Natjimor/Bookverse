@@ -4,5 +4,6 @@ export enum Screens {
     sing_up = "sing_up",
     landing = "landing",
     porfile = "porfile",
-    settings = "setings",
+    settings = "settings",
+    reading = "reading"
 }

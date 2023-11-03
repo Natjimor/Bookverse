@@ -1,6 +1,6 @@
-import { nav, photo, bar_library, library } from "../../export";
-import { menu } from "../../components/search_bar/nav_bar/profile/menu";
-console.log(menu);
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
+import { nav, photo, bar_library, library } from "../../components/export";
 console.log(photo);
 console.log(bar_library, library);
 
@@ -25,6 +25,7 @@ export class porfile extends HTMLElement {
          <barlib-container></barlib-container>
          <library-container></library-container>
         `
+        loadCss(this, styles)
     }
 }
 }

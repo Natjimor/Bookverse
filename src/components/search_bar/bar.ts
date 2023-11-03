@@ -1,5 +1,6 @@
 import "./nav_bar/profile/profile"
-import "./search_bar/search"
+import styles from "./styles.css"
+import { loadCss } from "../../utils/styles";
 
 export class nav extends HTMLElement {
   constructor() {
@@ -14,15 +15,14 @@ export class nav extends HTMLElement {
   render() {
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="./main/css/nav.css">
         <nav>
             <img src="https://pbs.twimg.com/media/F6nSixaXYAA95BR?format=png&name=240x240" id="logo">
             <p>ABOUT US</p>
             <p>EXPLORE</p>
-            <search-container></search-container>
             <profile-container></profile-container>
         </nav>
-        `;
+        ` 
+        loadCss(this, styles);
     }
   }
 }
