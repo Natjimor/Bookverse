@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-family: 'Asul', sans-serif;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.profile_photo{
+    margin-left: 2%;
+    margin-top: 2%;
+    object-fit: contain;
+}
+img{
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 100%;
+}
+
+.profile_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    justify-self: right;
+    align-items: center;
+    align-content: center;
+}
+
+.profile_name{  
+    font-family: 'Asul', sans-serif;
+    margin-left: 7%;
+    margin-top: 2%;
+
+}
+
+profile-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    justify-self: right;
+    width: 50%;
+}
+
+/* menu.css */
+.show-menu {
+    display: block !important; /* Muestra el menú */
+}
+  
+.hide-menu {
+    display: none !important; /* Oculta el menú */
+}
