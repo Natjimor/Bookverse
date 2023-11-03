@@ -1,0 +1,192 @@
+#back {
+    background-color: #0c0540b4;
+    height: 700px;
+    margin: 0%;
+    width: 100%;
+    position: fixed;
+  }
+  
+  #white {
+    background-color: rgba(255, 255, 255, 0.61);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    border: 1.5px solid rgba(209, 213, 219, 0.247);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-top: 2%;
+    border-radius: 30px;
+    display: flex;
+  }
+  
+  section {
+    background-image: url(/src/services/Group\ 20.png);
+    background-color: #0c0540;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+  }
+  
+  .inputsP {
+    font-family: "Asul", sans-serif;
+    color: #000000;
+    margin-top: 5%;
+    margin-left: 15%;
+    font-size: small;
+  }
+
+  .account{
+    font-family: "Asul", sans-serif;
+    color: #000000;
+    margin-top: 0%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    font-size: small;
+  }
+  a{
+    color: #2723a6;
+    cursor: pointer;
+  }
+  input {
+    background-color: #d9d9d9;
+    height: 40px;
+    width: 45%;
+    border-radius: 30px;
+    border: none;
+    margin-left: 12%;
+    padding-right: 25%;
+    padding-left: 5%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  img {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  p {
+    font-family: "Asul", sans-serif;
+    color: rgb(0, 0, 0);
+  }
+  
+  .link {
+    font-family: "Asul", sans-serif;
+    color: #2723a6;
+    font-size: small;
+    margin-left: 15%;
+    margin-top: 0%;
+    cursor: pointer;
+  }
+  
+  button {
+    font-family: "Asul", sans-serif;
+    font-size: medium;
+    background-color: #2723a6;
+    color: #ffffff;
+    border: 0;
+    border-radius: 30px;
+    width: 30%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #2723a6;
+    border-color: #2723a6;
+    border: 1px;
+  }
+  
+  #img {
+    height: 80px;
+    margin-top: 4%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  #welcome {
+    text-align: center;
+  }
+  
+  @media (max-width: 412px) {
+    #img {
+      height: 30px;
+  margin-bottom: 5%;
+      margin-top: 30%;
+    }
+  
+    #white {
+      width: 60%;
+      height: 55%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 20%;
+      margin-top: 15%;
+      border-radius: 20px;
+    }
+
+    section {
+      background-image: url(/src/sign_in/utils/Group\ 156.png);
+      
+    }
+  
+    .inputsP {
+      font-size: 10px;
+      margin-top: 8%;
+    }
+
+    .account{
+      font-size: 10px;
+    }
+  
+    input {
+      height: 25px;
+      width: 45%;
+      border-radius: 30px;
+      border: none;
+      margin-left: 12%;
+      padding-right: 25%;
+      padding-left: 5%;
+      font-size: 10px;
+    }
+  
+    #welcome {
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 15%;
+    }
+  
+    .link {
+      font-family: "Asul", sans-serif;
+      font-size: 10px;
+      margin-left: 15%;
+      margin-top: 8%;
+    }
+  
+    button {
+      font-family: "Asul", sans-serif;
+      font-size: medium;
+      width: 30%;
+      padding: 2%;
+      display: flex;
+      justify-content: center;
+      margin-left: 35%;
+      cursor: pointer;
+      font-size: 10px;
+    }
+  
+    button:hover {
+      background-color: #ffffff;
+      color: #2723a6;
+      border-color: #2723a6;
+      border: 1px;
+    }
+  }
+  
