@@ -1,11 +1,11 @@
 import styles from "./styles.css"
 import { loadCss } from "../../../utils/styles";
-import {books} from "../../../services/discover"
+import {books} from "../../../services/books"
 import carousel, { image } from "./welcome_carousel/carousel";
 import Flickity from 'flickity';
 console.log(carousel)
 
-export default class discover extends HTMLElement {
+export default class welcome extends HTMLElement {
     
     constructor() {
       super();
@@ -34,23 +34,25 @@ export default class discover extends HTMLElement {
         const discoverSection = this.ownerDocument.createElement("section")
 
         const containerText = this.ownerDocument.createElement("div")
-        containerText.classList.add("tittle")
-        const tittle = this.ownerDocument.createElement("h2")
-        tittle.textContent = "Discover your next reading"
-        containerText.appendChild(tittle)
+        containerText.classList.add("textContainer")
+        const welcome = this.ownerDocument.createElement("h2")
+        welcome.textContent = "Welcome Home"
+        const hr = this.ownerDocument.createElement("hr")
+        containerText.appendChild(welcome)
+        containerText.appendChild(hr)
         discoverSection.appendChild(containerText)
 
-        const container = this.ownerDocument.createElement("div")
-        container.classList.add("carousel")
-        container.setAttribute("data-flickity", '{ "autoPlay": true }');
 
-        books.map((e:any) => {
-            const carousel = this.ownerDocument.createElement("discover-carousel")
-            carousel.setAttribute(image.img, e.img)
-            carousel.setAttribute(image.book, e.book)
+        const container = this.ownerDocument.createElement("div")
+        container.classList.add("main-carousel")
+
+        books.Classics.forEach((e:any) => {
+            const carousel = this.ownerDocument.createElement("welcome-carousel")
+            carousel.setAttribute(image.image, e.image)
+            carousel.setAttribute(image.name, e.name)
+            
             container.appendChild(carousel)
         })
-
         
         discoverSection.appendChild(container)
         this.shadowRoot.appendChild(discoverSection)
@@ -63,12 +65,11 @@ export default class discover extends HTMLElement {
     initializeCarousel() {
       if (this.shadowRoot) {
   
-        const elem = this.shadowRoot.querySelector('.carousel');
+        const elem = this.shadowRoot.querySelector('.main-carousel');
         if (elem) {
           new Flickity(elem, {
             freeScroll: false,
-            wrapAround: true,
-            autoPlay: 1500,
+            groupCells: true,
             cellAlign: 'left',
             contain: true
           });
@@ -76,4 +77,4 @@ export default class discover extends HTMLElement {
       }
     }
   }
-customElements.define("main-discover", discover);
+customElements.define("main-welcome", welcome);

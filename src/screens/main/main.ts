@@ -22,10 +22,12 @@ class main extends HTMLElement {
             const bar = this.ownerDocument.createElement("navigation-bar")
             const menu = this.ownerDocument.createElement("menu-container")
             const discover = this.ownerDocument.createElement("main-discover")
+            const welcome = this.ownerDocument.createElement("main-welcome")
             
             container.appendChild(bar)
             container.appendChild(menu)
             container.appendChild(discover)
+            container.appendChild(welcome)
 
             this.shadowRoot.appendChild(container)
         }
