@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+.Left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.Right{
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    position: relative;
+}
+img{
+    width: 40vw;
+    height: 43vw;;
+}
+#quote{
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 10%;
+    left: -20%;
+}
+h2{
+    font-family: 'Asul', sans-serif;
+    color:#0C0540;
+    margin-bottom: 5%;
+    margin-top: 15%;
+}
+h4{
+    font-family: 'Asul', sans-serif;
+    color:#0C0540;
+    margin-bottom: 5%;
+}
+p{
+    font-family: 'Asul', sans-serif;
+    color:#0C0540;
+    margin-bottom: 15%;
+    font-size: small;
+}

@@ -1,0 +1,158 @@
+
+  #white {
+    background-color: rgba(255, 255, 255, 0.61);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(2px);
+    border: 1.5px solid rgba(209, 213, 219, 0.247);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    margin-top: 4%;
+    border-radius: 30px;
+    display: flex;
+  }
+  
+  section {
+    background-image: url(https://pbs.twimg.com/media/F-CLMDkWsAIz0mb?format=jpg&name=large);
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+  }
+  
+  .inputsP {
+    font-family: "Asul", sans-serif;
+    color: #000000;
+    margin-top: 10%;
+    margin-left: 15%;
+    font-size: small;
+  }
+  
+  input {
+    background-color: #d9d9d9;
+    height: 40px;
+    width: 45%;
+    border-radius: 30px;
+    border: none;
+    margin-left: 12%;
+    padding-right: 25%;
+    padding-left: 5%;
+  }
+  
+  img {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  p {
+    font-family: "Asul", sans-serif;
+    color: rgb(0, 0, 0);
+  }
+  
+  .link {
+    font-family: "Asul", sans-serif;
+    color: #2723a6;
+    font-size: small;
+    margin-left: 15%;
+    margin-top: 8%;
+    cursor: pointer;
+  }
+  
+  button {
+    font-family: "Asul", sans-serif;
+    font-size: medium;
+    background-color: #2723a6;
+    color: #ffffff;
+    border: 0;
+    border-radius: 30px;
+    width: 30%;
+    padding: 2%;
+    margin-top: 10%;
+    margin-bottom: 8%;
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #2723a6;
+    border-color: #2723a6;
+    border: 1px;
+  }
+  
+  #img {
+    height: 80px;
+    margin-left: 43%;
+    margin-top: 4%;
+  }
+  
+  #welcome {
+    text-align: center;
+  }
+  
+  @media (max-width: 412px) {
+    #img {
+      height: 30px;
+  
+      margin-top: 4%;
+    }
+  
+    #white {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      margin-left: 20%;
+      margin-top: 15%;
+      border-radius: 20px;
+    }
+  
+    .inputsP {
+      font-size: 10px;
+    }
+  
+    input {
+      height: 25px;
+      width: 45%;
+      border-radius: 30px;
+      border: none;
+      margin-left: 12%;
+      padding-right: 25%;
+      padding-left: 5%;
+      font-size: 10px;
+    }
+  
+    #welcome {
+      text-align: center;
+      font-size: 12px;
+    }
+  
+    .link {
+      font-family: "Asul", sans-serif;
+      font-size: 10px;
+      margin-left: 15%;
+      margin-top: 8%;
+    }
+  
+    button {
+      font-family: "Asul", sans-serif;
+      font-size: medium;
+      width: 30%;
+      padding: 2%;
+      display: flex;
+      justify-content: center;
+      margin-left: 35%;
+      cursor: pointer;
+      font-size: 10px;
+    }
+  
+    button:hover {
+      background-color: #ffffff;
+      color: #2723a6;
+      border-color: #2723a6;
+      border: 1px;
+    }
+  }
