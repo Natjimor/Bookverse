@@ -1,6 +1,9 @@
+
 import { inputs } from "../../components/inputs/inputs";
 import { Welcome } from "../../components/welcome/welcome";
 import { button } from "../../components/button_continue/continue";
+console.log("help");
+
 
 export class sing_in extends HTMLElement {
   constructor() {
