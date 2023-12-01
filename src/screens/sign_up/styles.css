@@ -1,4 +1,4 @@
-#back {
+.back {
     background-color: #0c0540b4;
     height: 700px;
     margin: 0%;
@@ -6,7 +6,7 @@
     position: fixed;
   }
   
-  #white {
+  .white {
     background-color: rgba(255, 255, 255, 0.61);
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(2px);
@@ -33,22 +33,30 @@
     font-family: "Asul", sans-serif;
     color: #000000;
     margin-top: 5%;
-    margin-left: 15%;
     font-size: small;
   }
 
-  .account{
-    font-family: "Asul", sans-serif;
-    color: #000000;
-    margin-top: 0%;
-    margin-left: 15%;
-    margin-bottom: 5%;
-    font-size: small;
-  }
   a{
     color: #2723a6;
     cursor: pointer;
   }
+
+  .account{
+    font-family: "Asul", sans-serif;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: small;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+  }
+
   input {
     background-color: #d9d9d9;
     height: 40px;
