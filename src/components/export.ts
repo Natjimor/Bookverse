@@ -11,8 +11,6 @@ export {default as discover} from "./main/main_discover/discover"
 export {default as welcome} from "./main/main_welcome/welcome"
 export {default as mainFind} from "./main/main_find/find"
 export {default as genre} from "./main/main_genre/genre"
-export { inputsName } from "./input_username/input"
-export { button } from "./button_continue/continue" 
 export { inputs } from "./inputs/inputs"
 export { Welcome } from "./welcome/welcome"
 

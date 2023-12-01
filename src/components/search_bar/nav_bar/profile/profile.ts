@@ -5,7 +5,7 @@ import { navigate } from "../../../../store/acctions";
 import { Screens } from "../../../../types/navigation";
 
 class profile extends HTMLElement {
-  menuVisible: boolean = true;
+  menuVisible: boolean = false;
 
   constructor() {
     super();
@@ -26,9 +26,9 @@ class profile extends HTMLElement {
     image_add?.addEventListener("click", () => {
       if (menuAction) {
         if (this.menuVisible === false) {
-          menuAction.classList.remove("hide-menu");
+          menuAction.classList.remove("hiden-menu");
         } else {
-          menuAction.classList.add("hide-menu");
+          menuAction.classList.add("hiden-menu");
         }
 
         this.menuVisible = !this.menuVisible;
@@ -44,8 +44,7 @@ class profile extends HTMLElement {
       name.innerHTML = "VALENTALIA";
 
       const image = this.ownerDocument.createElement("img");
-      image.src =
-        "https://elcomercio.pe/resizer/5Zq8UFMDoUYBPrnx_wQPErxH_3I=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DNVJOUDDF5DTHM3TVP2M7FNNEY.jpg";
+      image.src = "https://elcomercio.pe/resizer/5Zq8UFMDoUYBPrnx_wQPErxH_3I=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DNVJOUDDF5DTHM3TVP2M7FNNEY.jpg";
       image.classList.add("profile_photo");
 
       const div = this.ownerDocument.createElement("div");

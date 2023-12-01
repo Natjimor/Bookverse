@@ -1,8 +1,18 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { collection, addDoc } from "firebase/firestore";
-import { inputs, inputsName, button } from '../components/export';  
-
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import {
+  collection,
+  addDoc,
+  getDoc,
+  getDocs,
+  setDoc,
+  doc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCBhZNM7RlL8HCNwUaazKDe2qT6OaaVnh4",
@@ -11,34 +21,72 @@ const firebaseConfig = {
   storageBucket: "bookverse-7daf8.appspot.com",
   messagingSenderId: "167926713791",
   appId: "1:167926713791:web:f05f1a5872ece8bbb9250a",
-  measurementId: "G-T96DZV76EW"
+  measurementId: "G-T96DZV76EW",
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
+
+export const saveUser = async (name: any, email: any, password: any) => {
+  const auth = getAuth();
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      setDoc(doc(db, "users", name), {
+        name: name,
+        email: email,
+      });
+    })
+    .catch((error) => {
+      console.error("Error al crear usuario:", error.code, error.message);
+    });
+};
+
+export const getUsers = async (email: any, password: any) => {
+  const auth = getAuth();
+  signInWithEmailAndPassword(auth, email, password);
+  try {
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    const user = userCredential.user;
+    console.log("se inicio sesion", user);
+    return user; // Devuelve el usuario si la autenticación es exitosa
+  } catch (error) {
+    alert(
+      "correo electronico o contraseña invalidos, por favor intentalo de nuevo"
+    );
+    console.log(`Error al iniciar sesión`, error);
+  }
+};
+const uploadBook = async (book:any) => {
+  try {
+    const docRef = await addDoc(collection(db,"books"),book);
+    console.log("Document wrtten by ID:", docRef.id)
+    
+  } catch (error) {
+    console.error("error")
+  }
+}
+
+const getBooks = async () => {
+  try {
+    const docRef = await getDocs (collection(db,"books"));
+    docRef.docs.forEach((d) => {
+      console.log(d.data())
+    })
+    
+  } catch (error) {
+    console.error("error")
+  }
+}
 
 
-
-export const user = async (val_name = "") => {
-try {
-  const docRef = await addDoc(collection(db, "users"), {
-    name: val_name,
-    email: val_name,
-    userName: val_name,
-  });
-  console.log("Document written with ID: ", docRef.id);
-} catch (e) {
-  console.error("Error adding document: ", e);
-}}
-
-const Addemail = document.querySelector(".emailInput") as HTMLInputElement
- const btn = document.querySelector(".btnContinue")
-
-btn?.addEventListener("click", () =>{ 
-  let email = Addemail.value
-  user(email)
-})
-
-export default firebaseConfig
-
- 
+export default {
+  saveUser,
+  uploadBook,
+  getBooks
+};
