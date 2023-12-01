@@ -1,0 +1,30 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve",
+    "build": "webpack --watch --mode=development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "serve": "^14.2.1",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/flickity": "^2.2.10",
+    "firebase": "^10.5.2",
+    "firebase-admin": "^11.11.0",
+    "flickity": "^3.0.0",
+    "flickity-fullscreen": "^2.0.0",
+    "flickity-hash": "^2.0.1"
+  }
+}
