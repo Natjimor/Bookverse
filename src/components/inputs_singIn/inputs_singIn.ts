@@ -39,24 +39,30 @@ export class inputs_singIn extends HTMLElement {
   
         const input_pass = this.ownerDocument.createElement("input");
         input_pass.classList.add("passwordInput");
+        input_pass.type = "password"
         input_pass.placeholder = `password`;
   
         const btn = this.ownerDocument.createElement("button");
         btn.classList.add("btnContinue");
         btn.textContent = `Continue`;
         btn.addEventListener("click", async() =>{
+
           try {
             const email = input_email.value;
             const password = input_pass.value;
             const user = await getUsers(email, password);
             if (user) {
               dispatch(navigate(Screens.main));
+  
             } else {
               console.error("Error al obtener el usuario");
+    
             }
           } catch (error) {
             console.error("Error al iniciar sesión:", error);
           }
+          input_email.value = "";
+          input_pass.value = "";
         })
               
         this.shadowRoot.appendChild(p);

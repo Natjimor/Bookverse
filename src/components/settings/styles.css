@@ -1,0 +1,147 @@
+.subir{
+    /* background-color: #ffffff93; */
+    font-family: "Asul", sans-serif;
+    color: #423cf0;
+    padding: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+    position: absolute;
+    margin-top: 30%;
+    /* height: 20%;
+    width: 4%;
+   border-radius: 100px; */
+}
+.back{
+    background-color: #423cf0;
+    background-image: url(https://img-cdn.inc.com/image/upload/w_1024,h_576,c_fill/images/panoramic/GettyImages-900301626_437925_t2i3bm.jpg);
+    height: 80%;
+}
+.fondo{
+    background-color: #1912d49d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.save{
+    background-color: #1812d4;
+    display: flex;
+   padding: 2%;
+}
+
+.Psave{
+    color: white;
+    font-family: "Asul", sans-serif;
+    font-size: 100%;
+    margin-top: 1%;
+}
+
+
+.profile_photo{
+    margin-top: 3%;
+    width: 15%;
+    border-radius: 140px;
+}
+
+h1{
+    color: white;
+    font-family: "Asul", sans-serif;
+    margin-bottom: 0%;
+}
+
+p{
+    color: rgb(255, 255, 255);
+ margin-top: 0%;
+    font-size: 120%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 2%;
+}
+
+.author{ color: rgb(255, 255, 255);
+    margin-top: 0%;
+       font-size: 120%;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       margin-bottom: 2%;
+    margin-left: 4%;}
+
+.fondoBar{
+    background-color: #49456E;
+    display: flex;
+    box-shadow: 6px 20px 10px white;
+    margin-bottom: 0%;
+}
+
+h3{
+    color: white;
+    margin-left: 4%;
+}
+
+
+.cancel{
+    background-color: #ffffff93;  
+    font-family: "Asul", sans-serif;
+    font-size: 15px;
+    height: 10%;
+   padding: 0.8%;
+   border-radius: 10px;
+   display: flex;
+   margin-left: 3;
+   padding: 0.9%;
+   padding-left: 4%;
+   padding-right: 4%;
+}
+button{
+    background-color: rgba(255, 255, 255, 0.788);
+    color: #423cf0;
+    font-family: "Asul", sans-serif;
+   font-size: 15px;
+   height: 10%;
+   padding: 0.9%;
+   padding-left: 4%;
+   padding-right: 4%;
+   border: none;
+   border-radius: 10px;
+   display: flex;
+   margin-left: 7%;
+   margin-top: 0.7%;
+   cursor: pointer;
+}
+
+@media (max-width: 412px) {
+
+    .profile_photo {
+        margin-top: 5%;
+    }
+  
+    button{
+        padding: 1%;
+        font-size: 10px;
+       margin-left: 50%;
+       margin-top: 2%;
+       cursor: pointer;
+    }
+  
+
+    h1{
+        font-size: 15px;
+        color: white;
+        font-family: "Asul", sans-serif;
+        margin-bottom: 0%;
+    }
+    
+    p{
+     margin-top: 1%;
+        font-size: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 2%;
+    }
+
+    h3{
+        font-size: 12px;
+    }
+    .author{ 
+        font-size: 10px;
+    }
+  }
+  

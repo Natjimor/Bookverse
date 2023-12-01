@@ -1,6 +1,6 @@
 import styles from "./styles.css"
 import { loadCss } from "../../../../utils/styles";
-import {books} from "../../../../services/books"
+
 import carousel, { image } from "../../main_welcome/welcome_carousel/carousel";
 import Flickity from 'flickity';
 console.log(carousel)
@@ -14,7 +14,7 @@ export default class fantasy extends HTMLElement {
   
     connectedCallback() {
       this.render();
-      this.initializeCarousel();
+    
     }
   
     render() {
@@ -35,34 +35,34 @@ export default class fantasy extends HTMLElement {
         container.classList.add("main-carousel")
         container.setAttribute("id","carousel1")
 
-        books.Fantasy.forEach((e:any) => {
-            const carousel = this.ownerDocument.createElement("welcome-carousel")
-            carousel.setAttribute(image.image, e.image)
-            carousel.setAttribute(image.name, e.name)
+    //     books.Fantasy.forEach((e:any) => {
+    //         const carousel = this.ownerDocument.createElement("welcome-carousel")
+    //         carousel.setAttribute(image.image, e.image)
+    //         carousel.setAttribute(image.name, e.name)
 
-            container.appendChild(carousel)
-        })
+    //         container.appendChild(carousel)
+    //     })
 
-        this.shadowRoot.appendChild(container)
+    //     this.shadowRoot.appendChild(container)
 
-        const script = this.ownerDocument.createElement("script")
-        script.setAttribute("src","https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js")
-        this.shadowRoot.appendChild(script)
-      }
-    }
-    initializeCarousel() {
-      if (this.shadowRoot) {
+    //     const script = this.ownerDocument.createElement("script")
+    //     script.setAttribute("src","https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js")
+    //     this.shadowRoot.appendChild(script)
+    //   }
+    // }
+    // initializeCarousel() {
+    //   if (this.shadowRoot) {
   
-        const elem = this.shadowRoot.querySelector('.main-carousel');
-        if (elem) {
-          new Flickity(elem, {
-            freeScroll: false,
-            groupCells: true,
-            cellAlign: 'left',
-            contain: true
-          });
-        }
-      }
-    }
-  }
+    //     const elem = this.shadowRoot.querySelector('.main-carousel');
+    //     if (elem) {
+    //       new Flickity(elem, {
+    //         freeScroll: false,
+    //         groupCells: true,
+    //         cellAlign: 'left',
+    //         contain: true
+    //       });
+    //     }
+    //   }
+    // }
+  }}}
 customElements.define("fantasy-carousel", fantasy);

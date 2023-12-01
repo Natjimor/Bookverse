@@ -2,7 +2,8 @@
 import { addObserver, appState, dispatch } from "../../store";
 import { navigate } from "../../store/acctions";
 import { Screens } from "../../types/navigation"; 
-import  "../../components/export";
+import  {inputs_singIn} from "../../components/export";
+console.log(inputs_singIn);
 import styles from "./styles.css"
 import { loadCss } from "../../utils/styles";
 console.log("help");

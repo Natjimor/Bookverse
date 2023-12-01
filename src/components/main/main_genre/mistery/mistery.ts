@@ -1,6 +1,6 @@
 import styles from "./styles.css"
 import { loadCss } from "../../../../utils/styles";
-import {books} from "../../../../services/books"
+
 import carousel, { image } from "../../main_welcome/welcome_carousel/carousel";
 import Flickity from 'flickity';
 console.log(carousel)
@@ -35,14 +35,7 @@ export default class mistery extends HTMLElement {
         container.classList.add("main-carousel")
         container.setAttribute("id","carousel1")
 
-        books.Mistery.forEach((e:any) => {
-            const carousel = this.ownerDocument.createElement("welcome-carousel")
-            carousel.setAttribute(image.image, e.image)
-            carousel.setAttribute(image.name, e.name)
-
-            container.appendChild(carousel)
-        })
-
+     
         this.shadowRoot.appendChild(container)
 
         const script = this.ownerDocument.createElement("script")

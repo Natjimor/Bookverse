@@ -1,6 +1,5 @@
 import styles from "./styles.css"
 import { loadCss } from "../../../utils/styles";
-import {books} from "../../../services/books"
 import classic from "./classics/classics"
 import drama from "./drama/drama"
 console.log(classic)

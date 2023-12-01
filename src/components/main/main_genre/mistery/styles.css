@@ -45,11 +45,11 @@ div .flickity-prev-next-button {
     fill: white;
 }
   /* position outside */
-.flickity-prev-next-button.previous {
+  .flickity-prev-next-button.previous {
     left: -20px;
-    top: 100px;
+    top: 130px;
 }
 .flickity-prev-next-button.next {
     right: -20px;
-    top: 100px;
+    top: 130px;
 }

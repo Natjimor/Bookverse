@@ -1,5 +1,8 @@
 import styles from "./styles.css"
 import { loadCss } from "../../utils/styles";
+import { addObserver, appState, dispatch } from "../../store";
+import { navigate } from "../../store/acctions";
+import { Screens } from "../../types/navigation";
 
 export class bar_library extends HTMLElement {
   constructor() {
@@ -22,6 +25,10 @@ export class bar_library extends HTMLElement {
 
       const btn = this.ownerDocument.createElement("button");
       btn.textContent = `Profile settings`;
+
+      btn.addEventListener("click", ()=>{
+        dispatch(navigate(Screens.settings))
+      })
 
       div.appendChild(lib);
       div.appendChild(btn);

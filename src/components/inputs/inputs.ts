@@ -23,7 +23,7 @@ export class inputs extends HTMLElement {
       name.classList.add("inputsP");
 
       const user_name = this.ownerDocument.createElement("input");
-      user_name.placeholder = `User name`;
+      user_name.placeholder = `Write your user name`;
 
       const p = this.ownerDocument.createElement("p");
       p.textContent = `Email`;
@@ -31,7 +31,7 @@ export class inputs extends HTMLElement {
 
       const input_email = this.ownerDocument.createElement("input");
       input_email.classList.add("emailInput");
-      input_email.placeholder = `Email adress`;
+      input_email.placeholder = `Write your email adress`;
 
       const pas = this.ownerDocument.createElement("p");
       pas.textContent = `Password`;
@@ -39,7 +39,8 @@ export class inputs extends HTMLElement {
 
       const input_pass = this.ownerDocument.createElement("input");
       input_pass.classList.add("passwordInput");
-      input_pass.placeholder = `password`;
+      input_pass.type = "password"
+      input_pass.placeholder = `Write your password`;
 
       const btn = this.ownerDocument.createElement("button");
       btn.classList.add("btnContinue");
@@ -56,7 +57,9 @@ export class inputs extends HTMLElement {
         } else {
           alert("Por favor, ingrese un datos válidos.");
         }
-      });
+        input_email.value = "";
+        input_pass.value = "";
+        user_name.value = ""});
 
 
       this.shadowRoot.appendChild(name);

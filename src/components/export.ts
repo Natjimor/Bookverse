@@ -11,11 +11,10 @@ export {default as discover} from "./main/main_discover/discover"
 export {default as welcome} from "./main/main_welcome/welcome"
 export {default as mainFind} from "./main/main_find/find"
 export {default as genre} from "./main/main_genre/genre"
-export { inputsName } from "./input_username/input"
-export { button } from "./button_continue/continue" 
 export { inputs } from "./inputs/inputs"
 export { Welcome } from "./welcome/welcome"
 
+export { inputs_singIn } from "./inputs_singIn/inputs_singIn"
 
 export { app_singup } from "../screens/sign_up/sign_up" 
 export { sing_in } from "../screens/sign_in/sing_In"
@@ -27,3 +26,8 @@ export { porfile } from "../screens/profile/profile"
 export { bar_library } from "./favorites_bar/favorites_bar"
 export { photo } from "./photo/photo"
 export { library } from "./favorites/favorite"
+
+export {settingsPorfile} from "./settings/settings"
+
+export { setting } from "../screens/settings/settings"
+

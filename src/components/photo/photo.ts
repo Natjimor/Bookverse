@@ -1,5 +1,9 @@
 import styles from "./styles.css"
 import { loadCss } from "../../utils/styles";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import "../export";
+
 export class photo extends HTMLElement {
   constructor() {
     super();
@@ -10,8 +14,11 @@ export class photo extends HTMLElement {
     this.render();
   }
 
-  render() {
+  async render() {
     if (this.shadowRoot) {
+
+      const auth = getAuth();
+      const firestore = getFirestore();
 
       const back = this.ownerDocument.createElement("div");
       back.classList.add("back");
@@ -21,15 +28,30 @@ export class photo extends HTMLElement {
 
       const image = this.ownerDocument.createElement("img");
       image.src =
-        "https://elcomercio.pe/resizer/5Zq8UFMDoUYBPrnx_wQPErxH_3I=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/DNVJOUDDF5DTHM3TVP2M7FNNEY.jpg";
+        "https://cdn-icons-png.flaticon.com/512/1053/1053244.png";
       image.classList.add("profile_photo");
 
       const name = this.ownerDocument.createElement("h1");
       name.textContent = "Valentalia";
 
-      const user = this.ownerDocument.createElement("p");
-      user.textContent = `@valentalia`;
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          // El usuario está autenticado, ahora puedes obtener información adicional desde Firestore
+          const userDocRef = doc(firestore, 'users', user.uid);
+          const userDocSnapshot = await getDoc(userDocRef);
 
+          if (userDocSnapshot.exists()) {
+            const userData = userDocSnapshot.data();
+            name.textContent = userData.name || "users"; // Usa el nombre de usuario desde Firestore o uno predeterminado
+          }
+        }
+      });
+
+      const user = this.ownerDocument.createElement("p");
+      user.textContent = `@${name.textContent || "users"}`;
+
+      // const user = this.ownerDocument.createElement("p");
+      // user.textContent = `@valentalia`;
       div.appendChild(image);
       div.appendChild(name);
       div.appendChild(user);
