@@ -3,7 +3,7 @@ import { loadCss } from "../../utils/styles";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import "../export";
-import { subirImagen } from "../../services/firebase";
+// import { subirImagen } from "../../services/firebase";
 
 export class settingsPorfile extends HTMLElement {
   constructor() {
@@ -50,8 +50,8 @@ export class settingsPorfile extends HTMLElement {
       const btnSave = this.ownerDocument.createElement("button");
       btnSave.textContent = "Save"
 
-      btnSave.addEventListener("click", () => {
-        subirImagen( inputImagen.files![0])})
+      // btnSave.addEventListener("click", () => {
+      //   subirImagen( inputImagen.files![0])})
 
       const cancel = this.ownerDocument.createElement("button");
       cancel.textContent = "Cancel"

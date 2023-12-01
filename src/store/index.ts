@@ -7,6 +7,7 @@ import { Screens } from "../types/navigation";
 
 export const emptyState = {
   screen: Screens.landing,
+  bookDetails: undefined,
 };
 
 export let appState = Storage.get<AppState>({

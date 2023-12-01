@@ -2,6 +2,7 @@ import styles from "./styles.css"
 import { loadCss } from "../../../../utils/styles";
 import carousel, { image } from "../welcome_carousel/carousel";
 import Flickity from 'flickity';
+import { getBooks } from "../../../../services/firebase";
 console.log(carousel)
 
 export default class classic extends HTMLElement {
@@ -12,11 +13,10 @@ export default class classic extends HTMLElement {
     }
   
     connectedCallback() {
-      this.render();
-      this.initializeCarousel();
+      getBooks(this)
     }
   
-    render() {
+    render(booksByGenreData: any) {
       if (this.shadowRoot) {
         this.shadowRoot.innerHTML = ``;
         loadCss(this, styles);
@@ -34,12 +34,20 @@ export default class classic extends HTMLElement {
         container.classList.add("main-carousel")
         container.setAttribute("id","carousel1")
 
-       
+        booksByGenreData.classics.forEach((e:any) => {
+          const carousel = this.ownerDocument.createElement("welcome-carousel")
+          carousel.setAttribute(image.image, e.image)
+          carousel.setAttribute(image.name, e.name)
+
+          container.appendChild(carousel)
+        })
+
         this.shadowRoot.appendChild(container)
 
         const script = this.ownerDocument.createElement("script")
         script.setAttribute("src","https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js")
         this.shadowRoot.appendChild(script)
+        this.initializeCarousel();
       }
     }
     initializeCarousel() {

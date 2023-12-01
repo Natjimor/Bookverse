@@ -50,8 +50,6 @@ export class photo extends HTMLElement {
       const user = this.ownerDocument.createElement("p");
       user.textContent = `@${name.textContent || "users"}`;
 
-      // const user = this.ownerDocument.createElement("p");
-      // user.textContent = `@valentalia`;
       div.appendChild(image);
       div.appendChild(name);
       div.appendChild(user);

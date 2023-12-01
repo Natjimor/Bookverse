@@ -5,5 +5,6 @@ export enum Screens {
     landing = "landing",
     porfile = "porfile",
     settings = "settings",
-    reading = "reading"
+    reading = "reading",
+    pop = "pop",
 }

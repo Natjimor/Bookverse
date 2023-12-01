@@ -1,4 +1,4 @@
-import { sing_in, app_singup, porfile, landing, main, setting } from "./components/export";
+import { sing_in, app_singup, porfile, landing, main } from "./components/export";
 import firebaseConfig from "./services/firebase";
 import { emptyState, addObserver, appState } from "./store/index";
 import { Screens } from "./types/navigation";
@@ -7,7 +7,7 @@ console.log(navigate)
 console.log(emptyState)
 
 console.log(firebaseConfig);
-console.log(sing_in, app_singup, porfile, landing, main, setting);
+console.log(sing_in, app_singup, porfile, landing, main);
 
 class app extends HTMLElement {
   constructor() {
@@ -23,6 +23,7 @@ class app extends HTMLElement {
   render() {
     if (this.shadowRoot) {
       this.shadowRoot.innerHTML = ``;
+
       switch (appState.screen) {
         case Screens.porfile:
           const porfile = this.ownerDocument.createElement(`porfile-container`);
@@ -54,6 +55,10 @@ class app extends HTMLElement {
           const Setings = this.ownerDocument.createElement(`settings-screen`);
           this.shadowRoot.appendChild(Setings);
           break;
+        case Screens.pop:
+            const pop = this.ownerDocument.createElement(`pop-container`);
+            this.shadowRoot.appendChild(pop);
+            break;
         default:
           break;
       }

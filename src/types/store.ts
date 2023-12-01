@@ -7,5 +7,11 @@ export type AppState = {
 export enum ScreenActions {
     "NAVIGATE" = "NAVIGATE",
 }
+export const showDetail = (book:any) => {
+    return {
+        type: "VIEW_DETAIL",
+        payload: book,
+    };
+};
 
 export type Actions = ScreenActions;

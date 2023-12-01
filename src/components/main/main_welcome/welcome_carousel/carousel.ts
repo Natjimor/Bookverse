@@ -1,22 +1,30 @@
 import styles from "./styles.css"
 import { loadCss } from "../../../../utils/styles";
+import { dispatch } from "../../../../store";
+import firebase from "../../../../services/firebase";
+import { navigate } from "../../../../store/acctions";
+import { showDetail } from "../../../../store/acctions";
+import { Screens } from "../../../../types/navigation";
 
 export const enum image {
     image = "image",
-    name = "name"
+    name = "name",
+    id = "id"
 }
 
 export default class carousel extends HTMLElement {
 
     properties: Record<image, string> = {
         image: "",
-        name: ""
+        name: "",
+        id: ""
     }
 
     static get observedAttributes() {
         const properties: Record<image, null> = {
             image: null,
-            name: null
+            name: null,
+            id: null
         }
         return Object.keys(properties);
     }
@@ -35,6 +43,10 @@ export default class carousel extends HTMLElement {
                 this.properties.name = newValue
                 break;
 
+            case image.id:
+                this.properties.id = newValue
+                break;
+
             default:
                 break;
         }
@@ -48,10 +60,18 @@ export default class carousel extends HTMLElement {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
             <div class="carousel-cell">
-            <img src="${this.properties.image}" alt="${this.properties.name}">
+            <img src="${this.properties.image}" alt="${this.properties.name}" id = "imageElement">
             </div>
             `;
             loadCss(this, styles);
+
+            const imageElement = this.shadowRoot.getElementById("carouselImage");
+        if (imageElement) {
+            imageElement.addEventListener("click", async () => {
+                dispatch(showDetail(this.properties.id))
+                dispatch(navigate(Screens.pop))
+            });
+        }
         }
     }
 }

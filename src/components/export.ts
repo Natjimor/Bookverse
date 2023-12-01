@@ -15,7 +15,6 @@ export { inputs } from "./inputs/inputs"
 export { Welcome } from "./welcome/welcome"
 
 export { inputs_singIn } from "./inputs_singIn/inputs_singIn"
-
 export { app_singup } from "../screens/sign_up/sign_up" 
 export { sing_in } from "../screens/sign_in/sing_In"
 export { nav } from "./search_bar/bar"
@@ -30,4 +29,3 @@ export { library } from "./favorites/favorite"
 export {settingsPorfile} from "./settings/settings"
 
 export { setting } from "../screens/settings/settings"
-

@@ -7,3 +7,10 @@ export const navigate = (screen: Screens) => {
         payload: screen,
     };
 };
+
+export const showDetail = (book: any) => {
+    return {
+        type: "VIEW_DETAIL",
+        payload: book,
+    };
+};

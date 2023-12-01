@@ -6,7 +6,10 @@ export const reducer = (currentAction: any, currentState: any) => {
     switch (type) {    
         case "NAVIGATE":
             currentState.screen = payload
-        break;
+            break;
+        case "VIEW_DETAIL":
+            currentState.bookDetails = currentAction.payload
+            break;
     }
 
     return currentState;
