@@ -52,18 +52,7 @@ export class app_singup extends HTMLElement {
     div.appendChild(whiteDiv)
     section.appendChild(div)
     this.shadowRoot.appendChild(section)
-    
-
-      // this.shadowRoot.innerHTML = `
-      // <section>
-      // <div id="back">
-      // <div id="white">
-      // <input-container></input-container>
-      // <p class="account"> If ypu already have an account <a>Sing in</a></p>
-      // </div>
-      // </div>
-      // </section>
-      // `
+  
       loadCss(this, styles);
     }
   }
