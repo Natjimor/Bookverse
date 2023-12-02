@@ -54,4 +54,5 @@ button{
     box-shadow: 0 0 8px honeydew;
     width: 64%;
     height: 7vh;
+    cursor: pointer;
 }

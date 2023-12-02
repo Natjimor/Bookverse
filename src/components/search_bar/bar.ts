@@ -36,6 +36,9 @@ export class nav extends HTMLElement {
       about.textContent = "ABOUT US"
       const explore = this.ownerDocument.createElement("p")
       explore.textContent = "EXPLORE"
+      explore.addEventListener(('click'), () =>{
+        dispatch(navigate(Screens.main))
+     })
       divLeft.appendChild(about)
       divLeft.appendChild(explore)
 

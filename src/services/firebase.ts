@@ -86,10 +86,28 @@ export const getBooks = async (clase: any) => {
   }
 };
 
+export const getBook = async () => {
+  try {
+    let booksByGenre: Record<string, Array<any>> = {};
+    const docRef = await getDocs(collection(db, "book"));
+    docRef.docs.forEach((d) => {
+      const bookData = d.data();
+      return bookData
+    });
+    console.log(booksByGenre) 
+    
+  } catch (e) {
+    console.error("Error retrieving books: ", e);
+    throw e;
+    return Error
+  }
+};
+
 export default{
   saveUser,
   uploadBook,
-  getBooks
+  getBooks,
+  getBook
 }
 
  

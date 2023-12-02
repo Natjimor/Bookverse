@@ -27,8 +27,7 @@ export class photo extends HTMLElement {
       div.classList.add("fondo");
 
       const image = this.ownerDocument.createElement("img");
-      image.src =
-        "https://cdn-icons-png.flaticon.com/512/1053/1053244.png";
+      image.src = "https://liceotecnicopuentenuble.cl/wp-content/uploads/2023/09/usuario_gris.png";
       image.classList.add("profile_photo");
 
       const name = this.ownerDocument.createElement("h1");

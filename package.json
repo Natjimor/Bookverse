@@ -1,11 +1,11 @@
 {
   "name": "proyecto-final",
   "version": "1.0.0",
-  "description": "",
+  "description": "Code conduct: Nosotras nos regiremos por los siguientes principios en nuestras interacciones y contribuciones al proyecto:",
   "main": "index.js",
   "scripts": {
     "start": "serve",
-    "build": "webpack --watch --mode=production"
+    "build": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "",

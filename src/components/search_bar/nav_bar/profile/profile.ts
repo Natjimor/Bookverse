@@ -61,6 +61,10 @@ class profile extends HTMLElement {
       const p3 = this.ownerDocument.createElement("p");
       p3.classList.add("menuP")
       p3.innerHTML = "Setting";
+      p3.addEventListener("click", () => {
+        dispatch(navigate(Screens.settings))
+      })
+
       const p4 = this.ownerDocument.createElement("p");
       p4.classList.add("menuP")
       p4.innerHTML = "Log Out";

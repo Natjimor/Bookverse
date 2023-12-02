@@ -50,6 +50,7 @@ export class inputs extends HTMLElement {
         if (
           input_email.value.trim() !== ""
           && user_name.value.trim() !== ""
+          && input_email.value.includes("@")
         ) {
             saveUser(user_name.value,input_email.value, input_pass.value );
             dispatch(navigate(Screens.main))

@@ -44,6 +44,7 @@ button{
     width: 64%;
     height: 7vh;
     margin-top: 15%;
+    cursor: pointer;
 }
 .flickity-page-dots {
     bottom: 0px;

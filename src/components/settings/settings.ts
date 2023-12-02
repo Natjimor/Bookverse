@@ -1,5 +1,8 @@
 import styles from "./styles.css"
 import { loadCss } from "../../utils/styles";
+import { addObserver, appState, dispatch } from "../../store";
+import { navigate } from "../../store/acctions";
+import { Screens } from "../../types/navigation";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import "../export";
@@ -30,8 +33,7 @@ export class settingsPorfile extends HTMLElement {
       div.classList.add("fondo");
 
       const image = this.ownerDocument.createElement("img");
-      image.src =
-        "https://cdn-icons-png.flaticon.com/512/1053/1053244.png";
+      image.src = "https://liceotecnicopuentenuble.cl/wp-content/uploads/2023/09/usuario_gris.png";
       image.classList.add("profile_photo");
 
       const name = this.ownerDocument.createElement("h1");
@@ -55,7 +57,10 @@ export class settingsPorfile extends HTMLElement {
 
       const cancel = this.ownerDocument.createElement("button");
       cancel.textContent = "Cancel"
-      cancel.classList.add("cancel") 
+      cancel.classList.add("cancel")
+      cancel.addEventListener("click", () => {
+        dispatch(navigate(Screens.porfile))
+      })
 
       div.appendChild(inputImagen)
       div.appendChild(image);

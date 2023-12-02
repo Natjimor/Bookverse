@@ -1,5 +1,8 @@
 import styles from "./styles.css"
 import { loadCss } from "../../../utils/styles";
+import { dispatch } from "../../../store";
+import { navigate } from "../../../store/acctions";
+import { Screens } from "../../../types/navigation";
 
 export const enum image {
     img = "img",
@@ -66,10 +69,16 @@ export default class carousel extends HTMLElement {
             </div>
             <div class= "text">
             <h2>${this.properties.text}</h2>
-            <button>${this.properties.button}</button>
+            <button id = "Explore">${this.properties.button}</button>
             </div>
             `;
             loadCss(this, styles);
+            const imageElement = this.shadowRoot.getElementById("Explore");
+        if (imageElement) {
+            imageElement.addEventListener("click", async () => {
+                dispatch(navigate(Screens.sing_up))
+            });
+        }
         }
     }
 }

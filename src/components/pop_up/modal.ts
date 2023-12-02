@@ -1,5 +1,6 @@
 import styles from "./styles.css"
 import { loadCss } from "../../utils/styles";
+import { getBook } from "../../services/firebase";
 
 export const enum bookProps {
     name = "name",
